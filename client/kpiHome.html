@@ -1,0 +1,232 @@
+<head>
+  <title>route_controllers</title>
+</head>
+
+<body>
+</body>
+
+<template name="istroKPILayout">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img class="logo" src="./img/istro_img.png">
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/kpiItem">평가서</a></li>
+            <li><a href="/">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+
+    <article>
+       {{> yield}}
+    </article>
+
+</template>
+
+<template name="footer">
+  <footer>
+    <p>&copy; Company 2015</p>
+  </footer>
+</template>
+
+<template name="Home">
+    <div class="jumbotron">
+      <div class="container">
+        <h1>I-STRO KPI시스템</h1>
+        <p>너를 평가 해주마.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <h3 id="support-ie8-ie9" class="page-header">[ 기준표 ]</h3>
+      <br>
+      <p>※ 평가 기준표</p>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th class="col-xs-2 text-center">평가</th>
+              <th class="col-xs-2 text-center">비율(100%)</th>
+              <th class="col-xs-8 text-center">설명</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-center"><code>O</code></th>
+              <td class="text-danger text-center">5% ~ 15%</td>
+              <td class="text-success"> 탁월 (Outstanding)</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>E</code></th>
+              <td class="text-danger text-center"> 20% ~ 30%</td>
+              <td class="text-success"> 기대치를 초과 달성함 (Exceeds Expectations)</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>E</code></th>
+              <td class="text-danger text-center"> 20% ~ 30%</td>
+              <td class="text-success"> 기대치를 초과 달성함 (Exceeds Expectations)</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>ME</code></th>
+              <td class="text-danger text-center"> 30% ~ 50%</td>
+              <td class="text-success"> 기대치를 만족시킴 (Meets Expectations)</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>NI</code></th>
+              <td class="text-danger text-center"> 10% ~ 20%</td>
+              <td class="text-success"> 향상 요망 (Needs Improvements)</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>U</code></th>
+              <td class="text-danger text-center"> 5% ~ 10%</td>
+              <td class="text-success"> 기대치에 못 미침 (Does not meet expectations)</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>NA</code></th>
+              <td class="text-danger text-center"> 5% ~ 10%</td>
+              <td class="text-success"> 평가할 수 없음 (Not Applicable)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>※ 진급 기준 표</p>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th class="col-xs-2 text-center">근무년수</th>
+              <th class="col-xs-10 text-center">설명</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-center"><code>수습사원</code></th>
+              <td class="text-success"> 신입사원 입사 후 3개월 이내, 단 경력은 제외</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>사원</code></th>
+              <td class="text-success"> 입사 후 3년 미만, 휴직, 수습 기간 제외</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>대리</code></th>
+              <td class="text-success"> 사원 후 4년 미만, 휴직, 수습 기간 제외</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>과장</code></th>
+              <td class="text-success"> 대리 후 5년 미만, 휴직, 수습 기간 제외</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>차장</code></th>
+              <td class="text-success"> 과장 후 5년 미만, 휴직, 수습 기간 제외</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>부장</code></th>
+              <td class="text-success"> 차장 후 6년 미만, 휴직, 수습 기간 제외</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>이사</code></th>
+              <td class="text-success"> 실장 이상의 업무 역할을 지닌자에 한함</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>상무</code></th>
+              <td class="text-success"> 부문장 이상의 업무 역할을 지닌자에 한함</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>※ 연봉 협상 기준 표</p>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th class="col-xs-2 text-center">근무월수</th>
+              <th class="col-xs-10 text-center">설명</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-center"><code>대상자</code></th>
+              <td class="text-success"> 전년도 7월 31일 이전 입사자에 한함, 단 평가표 작성자에 한함</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>준대상자</code></th>
+              <td class="text-success"> 전년도 8월 01일부터 9월 30일까지 입사자에 한함</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>대상아님</code></th>
+              <td class="text-success"> 전년도 10월 01일 이후 입사자에 한함</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>※ 평가 기준 표</p>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th class="col-xs-2 text-center">평가</th>
+              <th class="col-xs-2 text-center">비율(100%)</th>
+              <th class="col-xs-8 text-center">설명</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-center"><code>본부장</code></th>
+              <td class="text-danger text-center">매출 대비 원가 5% 이상</td>
+              <td class="text-success"> 성과급 30% 범위내에서 대표이사가 정함</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><code>영업</code></th>
+              <td class="text-danger text-center"> 매출 목표 100% 달성</td>
+              <td class="text-success"> 성과급 10% 범위내에서 본부장 및 경영전략에서 정함</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center" rowspan="6" ><code>직원</code></th>
+              <td class="text-danger text-center"> O</td>
+              <td class="text-success"> 성과급의 20% 범위내에서 본부장 및 경영전략에서 정함</td>
+            </tr>
+            <tr>
+              <td class="text-danger text-center"> E</td>
+              <td class="text-success"> 성과급의 15% 범위내에서 본부장 및 경영전략에서 정함</td>
+            </tr>
+            <tr>
+              <td class="text-danger text-center"> ME</td>
+              <td class="text-success"> 성과급의 10% 범위내에서 본부장 및 경영전략에서 정함</td>
+            </tr>
+            <tr>
+              <td class="text-danger text-center"> NI</td>
+              <td class="text-success"> 성과급의 5% 범위내에서 본부장 및 경영전략에서 정함</td>
+            </tr>
+            <tr>
+              <td class="text-danger text-center"> U</td>
+              <td class="text-success"> 해당 사항 없음</td>
+            </tr>
+            <tr>
+              <td class="text-danger text-center"> NA</td>
+              <td class="text-success"> 해당 사항 없음</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr>
+        {{>footer}}
+       
+    </div> <!-- /container -->
+</template>
